@@ -36,7 +36,7 @@ npm install paychangu
 To start using `paychangu`, import the service and initialize it with your API credentials:
 
 ```javascript
-const PaymentsService = require('paychangu-v1');
+const PaymentsService = require('paychangu');
 
 const paymentService = new PaymentsService({
   apiKey: 'YOUR_API_KEY', // Replace with your actual API key
