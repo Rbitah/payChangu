@@ -102,7 +102,6 @@ Here's an example of initiating a payment:
 ```javascript
 try {
   const paymentResponse = await paymentService.initiatePayment({
-    productId: '12345',
     amount: 1000,
     first_name:'Roberto',
     last_name:'Bitah',
