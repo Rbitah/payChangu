@@ -31,7 +31,7 @@ class PaymentsService {
     return refId;
   }
 
-  async initiatePayment({  amount, email, name, description, callbackUrl, returnUrl }) {
+  async initiatePayment({  amount, email, first_name,last_name, currency, description, callbackUrl, returnUrl }) {
     const txRef = this.generateUniqueTransactionReference();
 
     try {
@@ -39,7 +39,7 @@ class PaymentsService {
         tx_ref: txRef,
         callback_url: callbackUrl,
         return_url: returnUrl,
-        currency: 'MWK',
+        currency,
         email,
         first_name,
         last_name,

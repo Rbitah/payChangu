@@ -52,7 +52,8 @@ Initiates a payment transaction.
 
 ```javascript
 await paymentService.initiatePayment({
-  amount: 1000,             // Amount in MWK
+  currency: 'MWK'   //currency MWK or USD
+  amount: 1000,             // Amount in MWK Or USD depening on currency
   email: 'user@example.com', // Payer's email address(Optional)
   first_name,         // Payer's first name(Optional)
   last_name,         // Payer's last name (Optional)
@@ -102,6 +103,7 @@ Here's an example of initiating a payment:
 ```javascript
 try {
   const paymentResponse = await paymentService.initiatePayment({
+    currency: 'MWK',
     amount: 1000,
     first_name:'Roberto',
     last_name:'Bitah',
