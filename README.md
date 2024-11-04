@@ -53,8 +53,9 @@ Initiates a payment transaction.
 ```javascript
 await paymentService.initiatePayment({
   amount: 1000,             // Amount in MWK
-  email: 'user@example.com', // Payer's email address
-  name: 'Bitah Roberto',         // Payer's name
+  email: 'user@example.com', // Payer's email address(Optional)
+  first_name,         // Payer's first name(Optional)
+  last_name,         // Payer's last name (Optional)
   description: 'Test Payment', // Description of the payment
   callbackUrl: 'https://your-callback-url.com', // URL for payment completion callback
   returnUrl: 'https://your-return-url.com',     // URL to redirect after payment
@@ -103,8 +104,9 @@ try {
   const paymentResponse = await paymentService.initiatePayment({
     productId: '12345',
     amount: 1000,
+    first_name:'Roberto',
+    last_name:'Bitah',
     email: 'user@example.com',
-    name: 'Robert Bitah',
     description: 'Sample Payment',
     callbackUrl: 'https://your-callback-url.com',
     returnUrl: 'https://your-return-url.com',

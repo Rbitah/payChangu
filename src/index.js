@@ -41,7 +41,8 @@ class PaymentsService {
         return_url: returnUrl,
         currency: 'MWK',
         email,
-        name,
+        first_name,
+        last_name,
         description,
         amount,
       });
